@@ -20,6 +20,7 @@ export class NgserviceService {
   }
 
   addUserToRemote( user:User):Observable<any>{
+    console.log(user);
     return this._http.post<any>("http://localhost:8088/adduser", user);
   }
 }

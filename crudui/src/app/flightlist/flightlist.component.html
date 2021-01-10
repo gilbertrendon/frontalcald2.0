@@ -1,9 +1,10 @@
 <div class="container">
     <h2>Vuelos y tarifas</h2>
     <p>Operaciones CRUD</p>            
-    <!-- <form action="" id="busquedaForm">
-      <input name="filterPost" placeholder="buscar..." type="text"  class="form-control" [(ngModel)]="filterPost"  >
-    </form> -->
+    <form action="" id="busquedaForm">
+      <!-- [(ngModel)]="filterPost"  -->
+      <input name="filterPost" placeholder="buscar..." type="text"  class="form-control"  >
+    </form>
     &nbsp;&nbsp;
     &nbsp;&nbsp;
     <div class="row">
@@ -39,7 +40,7 @@
                  <td>{{Flight.cost}}</td>
               
                   <td>
-                    <select id="user" name="user" #name="ngModel" [(ngModel)]="userService.user"
+                    <select id="user" name="user" #name="ngModel" [(ngModel)]="_user.id"
                     placeholder="Selecciona un usuario">
                   <option *ngFor="let user of userService.users" [value]="user.id">{{user.name}}</option>
                   </select>
@@ -47,8 +48,8 @@
 
                  
               <td>
-                <!-- (click)="reservFlight(Flight.idflight,user.id)" -->
-                <button type="button" class="btn btn-primary" >Reservar</button>
+                
+                <button (click)="reservFlight(Flight.idflight)" type="button" class="btn btn-primary" >Reservar</button>
                 &nbsp;&nbsp;
               </td>
             </tr>

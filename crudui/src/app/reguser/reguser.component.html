@@ -12,13 +12,20 @@
             <input value="" type="text" class="form-control" required [(ngModel)] = "user.name"  name="name">
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
             <label for="registred">Registred:</label>
-            <select name="registred" id="registred" class="form-control" required [(ngModel)]="user.registred" disabled>
-                <option value="0">No</option>
+            <select name="registred" id="registred" class="form-control" required [(ngModel)]="user.registred">
+                <option value="1">No</option>
                 <option value="1" selected>Si</option>
               </select>
+        </div> -->
+
+        <div 
+        class="form-group">
+            <label for="registred">Id user:</label>
+            <input value="1" type="text" class="form-control" required [(ngModel)]="user.registred" name="registred" disabled>
         </div>
+
         <div class="form-group">
             <label for="age">Age</label>
             <input value="" type="text" class="form-control" required [(ngModel)] = "user.age"  name="age">

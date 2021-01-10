@@ -17,15 +17,19 @@ export class ReguserComponent implements OnInit {
 
   adduserformsubmit()
   {
+    //this.user.registred = 1;
+    console.log(this.user.registred);
     this._service.addUserToRemote(this.user).subscribe
     (
       data=>
             {
              console.log("data added succesfully");
-             this._route.navigate(['viewflightlist']) ;
+             this._route.navigate(['']) ;
             },
+            
             error=>console.log("error")
     )
+    this._route.navigate(['']) 
   }
 
 }

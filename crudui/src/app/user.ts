@@ -1,6 +1,6 @@
 export class User {
     id:number;
-    registred:boolean;
+    registred:number;
     name:String;
     age:number
 
