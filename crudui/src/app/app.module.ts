@@ -5,13 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 //import { AppuserComponent } from './appuser/appuser.component';
 import { UpdateflightComponent } from './updateflight/updateflight.component';
-import { FlightlistComponent } from './flightlist/flightlist.component';
+import { FlightlistComponent } from './worklist/flightlist.component';
 import { AddreservComponent } from './addreserv/addreserv.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoguserComponent } from './loguser/loguser.component';
 import { ReguserComponent } from './reguser/reguser.component';
-
+// import { WorklistComponent } from './worklist/worktlist.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +21,7 @@ import { ReguserComponent } from './reguser/reguser.component';
     AddreservComponent,
     LoguserComponent,
     ReguserComponent
+    // ,WorklistComponent
   ],
   imports: [
     BrowserModule,
