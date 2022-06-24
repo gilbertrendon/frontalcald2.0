@@ -11,6 +11,13 @@ export class NgserviceService {
 
   constructor(private _http:HttpClient) { }
 
+  //Para lo referente a las tareas
+  fetchWorktListFromRemote():Observable<any>{
+    return this._http.get<any>("http://localhost:8081/getworklist/");
+  }
+
+  //fin tareas
+
   fetchFlightListFromRemote():Observable<any>{
     return this._http.get<any>("http://localhost:8088/getflightlist/");
   }

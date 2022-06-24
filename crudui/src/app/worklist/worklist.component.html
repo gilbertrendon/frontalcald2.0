@@ -1,0 +1,52 @@
+<div class="container">
+    <h2>Tareas y empleados</h2>
+    <p>Operaciones CRUD</p>            
+    &nbsp;&nbsp;
+    <div class="row">
+      <button type="button" class="btn btn-primary" >
+       Crear tarea</button>
+    </div>
+    &nbsp;&nbsp;
+    &nbsp;&nbsp;
+    <div class="row">
+      <h2>Listado de tareas</h2>
+      <div class="col">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Tarea</th>
+              <th>Estado</th>
+              <th>Fecha culmimación</th>
+              <th>Días de retraso</th>
+              <th>Empleado encargado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- *ngFor="let Fight of _flightList"  -->
+            <!-- | filter:'cityinit':filterPost" -->
+                <tr *ngFor="let Work of _workList">
+    
+                 <td>{{Work.id}}</td> 
+                 <td>{{Work.status}}</td>
+                 <td>{{Work.date}}</td>
+                 <td>{{Work.retdays}}</td> 
+                 <td>{{Work.empAsign}}</td>                 
+                 <td>
+                  <button (click)="reservFlight(Flight.idflight)" type="button" class="btn btn-primary" >Editar</button>
+                  &nbsp;&nbsp;
+                  <button (click)="reservFlight(Flight.idflight)" type="button" class="btn btn-primary" >Eliminar</button>
+                 </td>
+
+                 
+              <!-- <td>
+                
+                <button (click)="reservFlight(Flight.idflight)" type="button" class="btn btn-primary" >Reservar</button>
+                &nbsp;&nbsp;
+              </td> -->
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    </div>
