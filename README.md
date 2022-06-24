@@ -1,3 +1,8 @@
+NOTAS IMPORTANTES:
+Estando parado en este caso en la carpeta de crudui
+Para generar una componente ng g nombreComponente
+
+
 # frontAlcald
 Front end de la prueba de la alcaldía
 Para relacionar las tablas en las vistas se harán combobox que impedirán que se inserten datos que no existen en la bd

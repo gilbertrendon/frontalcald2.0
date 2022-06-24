@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http'
 import { Observable } from 'rxjs';
 import {Reserv} from './reserv';
 import { User } from './user';
+import { Work } from './work';
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +17,10 @@ export class NgserviceService {
     return this._http.get<any>("http://localhost:8081/getworklist/");
   }
 
+  //Para añadir una taréa
+  addWork( work:Work):Observable<any>{
+    return this._http.post<any>("http://localhost:8081/addwork", work);
+  }
   //fin tareas
 
   fetchFlightListFromRemote():Observable<any>{

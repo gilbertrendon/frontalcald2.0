@@ -6,16 +6,13 @@ import { AppComponent } from './app.component';
 import {FlightlistComponent} from './worklist/flightlist.component';
 import { LoguserComponent } from './loguser/loguser.component';
 import { ReguserComponent } from './reguser/reguser.component';
+import { AddworkComponent } from './addwork/addwork.component';
 // import { WorklistComponent } from './worklist/worktlist.component';
 
 const routes: Routes = [
-  //{path:'',component:AppComponent},
-  //{path:'addreserv',component:AddreservComponent},
+ 
   {path: '', component:FlightlistComponent},
-  // {path: 'worklistComponent', component:worklistComponent},
-  {path: 'reguser', component:ReguserComponent},
-  {path: 'viewflightlist', component:FlightlistComponent},
-  //{path: 'adduser', component:AppuserComponent}
+  {path: 'addwork', component:AddworkComponent}
 ];
 
 @NgModule({

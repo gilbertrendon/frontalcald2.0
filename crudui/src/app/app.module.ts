@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { LoguserComponent } from './loguser/loguser.component';
 import { ReguserComponent } from './reguser/reguser.component';
+import { AddworkComponent } from './addwork/addwork.component';
 // import { WorklistComponent } from './worklist/worktlist.component';
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ReguserComponent } from './reguser/reguser.component';
     FlightlistComponent,
     AddreservComponent,
     LoguserComponent,
-    ReguserComponent
+    ReguserComponent,
+    AddworkComponent
     // ,WorklistComponent
   ],
   imports: [

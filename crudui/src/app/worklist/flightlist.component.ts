@@ -111,13 +111,12 @@ export class FlightlistComponent implements OnInit {
     //this._route.navigate(['/addreserv']);
   }
 
-
   addUser(){
     this._route.navigate(['adduser']);
   }
 
+  addWork(){
+    this._route.navigate(['addwork']);
+  }
 
-
-
-  
 }

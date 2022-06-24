@@ -1,0 +1,36 @@
+<div class="container">
+    <h2>Add work</h2>
+    <form #addworkform="ngForm" (ngSubmit)="addWork()">
+        <div 
+        class="form-group">
+            <label for="id">Tarea: </label>
+            <input value="" type="text" class="form-control" required [(ngModel)]="work.id" name="id">
+        </div>
+        &nbsp;&nbsp;
+        <div class="form-group">
+            <label for="status">Estado: </label>
+            <input value="" type="text" class="form-control" required [(ngModel)] = "work.status"  name="status">
+        </div>
+        &nbsp;&nbsp;
+        <div 
+        class="form-group">
+            <label for="date">Fecha: </label>
+            <input value="" type="text" class="form-control" required [(ngModel)]="work.date" name="date">
+        </div>
+        &nbsp;&nbsp;
+        <div class="form-group">
+            <label for="retdays">Días restantes: </label>
+            <input value="" type="text" class="form-control" required [(ngModel)] = "work.retdays"  name="retdays">
+        </div>
+        &nbsp;&nbsp;
+        <div class="form-group">
+            <label for="empasign">Empleado encargado: </label>
+            <input value="" type="text" class="form-control" required [(ngModel)] = "work.empasign"  name="empasign">
+        </div>
+        &nbsp;&nbsp;
+        <div>
+            <input type="submit" value="Crear" >
+        </div>
+        
+    </form>
+</div>
