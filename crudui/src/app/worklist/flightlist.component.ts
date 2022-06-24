@@ -2,25 +2,30 @@ import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { NgserviceService } from '../ngservice.service';
 import {UserService} from "../services/user.service";
+import { WorkService } from '../services/work.service';
 import {User} from "../user";
 import {Flight} from "../flight";
+import {Work} from "../work";
 import { ReservService } from '../services/reserv.service';
 import { Reserv } from '../reserv';
 
 
 @Component({
   selector: 'app-flightlist',
-  templateUrl: './flightlist.component.html',
+  templateUrl: './worklist.component.html',
   styleUrls: ['./flightlist.component.css'],
-  providers: [UserService],
+  providers: [UserService, WorkService],
 })
 export class FlightlistComponent implements OnInit {
   //, private _route:Route
-  constructor(public reservService:ReservService,public userService:UserService, private _service:NgserviceService, private _route:Router) { }
+  constructor(public reservService:ReservService,public userService:UserService,
+     private _service:NgserviceService, private _route:Router,
+     public workService:WorkService) { }
 
   _usersList: User[];
   _flightList: Flight[];
   _reservist: Reserv[];
+  _workList: Work[];
  
   _user = new User();
   _valid = 0; 
@@ -34,8 +39,20 @@ export class FlightlistComponent implements OnInit {
       },
       error=>console.log("Exception ocurred")
     )
+    
+    this._service.fetchWorktListFromRemote().subscribe(
+      data=>{
+              console.log("Response received");
+              this._workList=data;
+      }
+    )
   }
 
+  getWorks(){
+    this.workService.getWorks().subscribe((res) =>{
+      this.workService.works = res;
+    });
+  }
   //NOTA: es posible que el arreglo users no devuelva elementos debido a que la lógica es complicada de entender
   getUsers(){
     this.userService.getUsers().subscribe((res) =>{
