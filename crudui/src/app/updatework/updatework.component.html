@@ -1,1 +1,35 @@
-<p>updatework works! locu</p>
+<div class="container">
+    <h2>Add work</h2>
+    <form #updateworkform="ngForm" (ngSubmit)="updateWork()">
+        <div 
+        class="form-group">
+            <label for="id">Tarea: </label>
+            <input value="work.id" type="text" class="form-control" required [(ngModel)]="work.id" name="id" disabled>
+        </div>
+        &nbsp;&nbsp;
+        <div class="form-group">
+            <label for="status">Estado: </label>
+            <input value="work.status" type="text" class="form-control" required [(ngModel)] = "work.status"  name="status">
+        </div>
+        &nbsp;&nbsp;
+        <div 
+        class="form-group">
+            <label for="date">Fecha: </label>
+            <input value="work.date" type="text" class="form-control" required [(ngModel)]="work.date" name="date">
+        </div>
+        &nbsp;&nbsp;
+        <div class="form-group">
+            <label for="retdays">Días restantes: </label>
+            <input value="work.retdays" type="text" class="form-control" required [(ngModel)] = "work.retdays"  name="retdays">
+        </div>
+        &nbsp;&nbsp;
+        <div class="form-group">
+            <label for="empAsign">Empleado encargado: </label>
+            <input value="work.empAsign" type="text" class="form-control" required [(ngModel)] = "work.empAsign"  name="empAsign">
+        </div>
+        &nbsp;&nbsp;
+        <div>
+            <input type="submit" value="Editar" >
+        </div>
+    </form>
+</div>

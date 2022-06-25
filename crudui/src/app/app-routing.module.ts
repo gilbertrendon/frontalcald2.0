@@ -14,7 +14,7 @@ const routes: Routes = [
  
   {path: '', component:FlightlistComponent},
   {path: 'addwork', component:AddworkComponent},
-  {path: 'updatework/:id/:status/:date/:retdays/:empAsign', component:UpdateworkComponent}
+  {path: 'updatework/:id/:status/:date/:retdays/:empAsign', component:UpdateworkComponent},
 ];
 
 @NgModule({

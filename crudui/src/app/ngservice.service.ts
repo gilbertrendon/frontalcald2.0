@@ -21,6 +21,12 @@ export class NgserviceService {
   addWork( work:Work):Observable<any>{
     return this._http.post<any>("http://localhost:8081/addwork", work);
   }
+
+  //Para borrar tarea
+  deleteWork(id: number):Observable<any>{
+    console.log("asdfasdfasdf");
+    return this._http.delete<any>("http://localhost:8081/deleteworkbyid/1");
+  }
   //fin tareas
 
   fetchFlightListFromRemote():Observable<any>{

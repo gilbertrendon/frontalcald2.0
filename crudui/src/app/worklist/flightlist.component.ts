@@ -30,6 +30,7 @@ export class FlightlistComponent implements OnInit {
   _valid = 0; 
   //Va a ser igual a el siguiente elemento de la lista de reservas
   ngOnInit(): void {
+    // window.location.reload();
     this.getWorks();
     this._service.fetchWorktListFromRemote().subscribe(
       data=>{
@@ -44,6 +45,14 @@ export class FlightlistComponent implements OnInit {
       this.workService.works = res;
     });
   }
+
+  //Para borrar tarea
+  deleteWork(id: number){
+    console.log("*******************************");
+    console.log(this._service.deleteWork(id));
+    //window.location.reload();
+  }
+  
   //NOTA: es posible que el arreglo users no devuelva elementos debido a que la lógica es complicada de entender
   getUsers(){
     this.userService.getUsers().subscribe((res) =>{
