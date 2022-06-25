@@ -5,7 +5,7 @@ Para generar una componente ng g nombreComponente
 Para mandar parámetros por url:
 En este caso desde el html mando los parámetros de la lista de tareas, luego construyo el string de la url para la edición y la recibo desde app-routing.module.ts
 
-
+FALTA EL DELETE DESDE EL FRONT END
 
 
 # frontAlcald
