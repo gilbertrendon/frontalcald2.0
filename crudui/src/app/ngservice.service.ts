@@ -25,7 +25,7 @@ export class NgserviceService {
   //Para borrar tarea
   deleteWork(id: number):Observable<any>{
     console.log("asdfasdfasdf");
-    return this._http.delete<any>("http://localhost:8081/deleteworkbyid/1");
+    return this._http.delete<any>("http://localhost:8081/deleteworkbyid/"+id);
   }
   //fin tareas
 

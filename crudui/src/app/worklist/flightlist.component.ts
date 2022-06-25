@@ -48,9 +48,13 @@ export class FlightlistComponent implements OnInit {
 
   //Para borrar tarea
   deleteWork(id: number){
-    console.log("*******************************");
-    console.log(this._service.deleteWork(id));
-    //window.location.reload();
+    this._service.deleteWork(id).subscribe(
+      data=>{
+        console.log("deleted succesfully");
+      },
+      error => console.log("Exception ocurred")
+    )
+    window.location.reload();
   }
   
   //NOTA: es posible que el arreglo users no devuelva elementos debido a que la lógica es complicada de entender
