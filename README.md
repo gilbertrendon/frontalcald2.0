@@ -2,6 +2,11 @@ NOTAS IMPORTANTES:
 Estando parado en este caso en la carpeta de crudui
 Para generar una componente ng g nombreComponente
 
+Para mandar parámetros por url:
+En este caso desde el html mando los parámetros de la lista de tareas, luego construyo el string de la url para la edición y la recibo desde app-routing.module.ts
+
+
+
 
 # frontAlcald
 Front end de la prueba de la alcaldía

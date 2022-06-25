@@ -10,7 +10,8 @@ import { Work } from '../work';
 })
 export class AddworkComponent implements OnInit {
   work = new Work();
-  constructor(private _route: Router, private _service: NgserviceService) { }
+  constructor(private _route: Router, 
+    private _service: NgserviceService) { }
 
   ngOnInit(): void {
   }

@@ -22,7 +22,6 @@ export class FlightlistComponent implements OnInit {
      private _service:NgserviceService, private _route:Router,
      public workService:WorkService) { }
 
-  _usersList: User[];
   _flightList: Flight[];
   _reservist: Reserv[];
   _workList: Work[];
@@ -31,15 +30,7 @@ export class FlightlistComponent implements OnInit {
   _valid = 0; 
   //Va a ser igual a el siguiente elemento de la lista de reservas
   ngOnInit(): void {
-    this.getUsers();
-    this._service.fetchFlightListFromRemote().subscribe(
-      data=>{
-              console.log("Response received");
-              this._flightList=data;
-      },
-      error=>console.log("Exception ocurred")
-    )
-    
+    this.getWorks();
     this._service.fetchWorktListFromRemote().subscribe(
       data=>{
               console.log("Response received");
@@ -66,16 +57,45 @@ export class FlightlistComponent implements OnInit {
       this._reservist = res;
     })
   }
-  //Para hacer las reservas
-  reservFlight(idflight:number){
+ 
+  addUser(){
+    this._route.navigate(['adduser']);
+  }
+
+  addWork(){
+    this._route.navigate(['addwork']);
+  }
+
+  updateWork(id:number,status: String,date: String,
+     retdays: number,empAsign: number){
+    this._route.navigate(['updatework/'+id+'/'+status+'/'+date
+    +'/'+retdays+'/'+empAsign]);
+    
+    this.getWorks();
+    let _longworks;
+    if(this.workService.works == undefined || this.workService.works == null ){
+      _longworks = 0;
+    }else{
+      _longworks = Object.keys(this.workService.works).length;
+      console.log("***************************************")
+      console.log(this._workList)
+    }
+
+
+
+
+    //Obtengo el listado de las reservas
+    //si al menos hay una reserva se mira si es la del id que 
+    // //estoy buscando
+    // Ssi si es la que estoy buscando mando los datos como parámetro 
+    // para abrir la vista de editar work
+  }
+
+
+   //Para hacer las reservas
+   reservFlight(idflight:number){
     this.getReservs();
      let _longeservs = 0;
-    // if(this._reservist.length != undefined){
-    //   _longeservs = this._reservist.length;
-    // }else{
-    //   _longeservs = 0;
-    // }
-    
   
     //el id reserva creo que sino se manda nada lo pone automático
     if( _longeservs == 0){
@@ -104,19 +124,8 @@ export class FlightlistComponent implements OnInit {
       }
     }
 
-    
     this._valid = 0;
     console.log("idflight"+idflight+"iduser"+this._user.id);
-
-    //this._route.navigate(['/addreserv']);
-  }
-
-  addUser(){
-    this._route.navigate(['adduser']);
-  }
-
-  addWork(){
-    this._route.navigate(['addwork']);
   }
 
 }

@@ -7,12 +7,14 @@ import {FlightlistComponent} from './worklist/flightlist.component';
 import { LoguserComponent } from './loguser/loguser.component';
 import { ReguserComponent } from './reguser/reguser.component';
 import { AddworkComponent } from './addwork/addwork.component';
+import { UpdateworkComponent } from './updatework/updatework.component';
 // import { WorklistComponent } from './worklist/worktlist.component';
 
 const routes: Routes = [
  
   {path: '', component:FlightlistComponent},
-  {path: 'addwork', component:AddworkComponent}
+  {path: 'addwork', component:AddworkComponent},
+  {path: 'updatework/:id/:status/:date/:retdays/:empAsign', component:UpdateworkComponent}
 ];
 
 @NgModule({

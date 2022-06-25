@@ -33,17 +33,11 @@
                  <td>{{Work.retdays}}</td> 
                  <td>{{Work.empAsign}}</td>                 
                  <td>
-                  <button (click)="reservFlight(Flight.idflight)" type="button" class="btn btn-primary" >Editar</button>
+                  <button (click)="updateWork(Work.id,Work.status
+                  ,Work.date,Work.retdays,Work.empAsign)" type="button" class="btn btn-primary" >Editar</button>
                   &nbsp;&nbsp;
-                  <button (click)="reservFlight(Flight.idflight)" type="button" class="btn btn-primary" >Eliminar</button>
+                  <button type="button" class="btn btn-primary" >Eliminar</button>
                  </td>
-
-                 
-              <!-- <td>
-                
-                <button (click)="reservFlight(Flight.idflight)" type="button" class="btn btn-primary" >Reservar</button>
-                &nbsp;&nbsp;
-              </td> -->
             </tr>
           </tbody>
         </table>

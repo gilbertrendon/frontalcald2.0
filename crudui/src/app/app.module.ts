@@ -12,6 +12,7 @@ import { FormsModule } from '@angular/forms';
 import { LoguserComponent } from './loguser/loguser.component';
 import { ReguserComponent } from './reguser/reguser.component';
 import { AddworkComponent } from './addwork/addwork.component';
+import { UpdateworkComponent } from './updatework/updatework.component';
 // import { WorklistComponent } from './worklist/worktlist.component';
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { AddworkComponent } from './addwork/addwork.component';
     AddreservComponent,
     LoguserComponent,
     ReguserComponent,
-    AddworkComponent
+    AddworkComponent,
+    UpdateworkComponent
     // ,WorklistComponent
   ],
   imports: [
